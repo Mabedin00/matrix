@@ -102,3 +102,11 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #end octant 7
     #end octants 2 and 7
 #end draw_line
+
+
+def add_trinagles(matrix, height, width, x0, y, x1):
+    amt =int(abs(x1 - x0)/width)
+    for i in range(0,amt):
+        add_edge(matrix, x0, y, 0, x0 + int(width / 2) , y + height , 0)
+        add_edge(matrix, x0 + int(width/2), y + height, 0 , x0 + width, y, 0)
+        x0 += width

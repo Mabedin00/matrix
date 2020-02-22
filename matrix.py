@@ -16,7 +16,7 @@ def print_matrix( matrix ):
     for y in range(4):
         for x in range(len(matrix)):
             # print("x:{} y:{}".format(x, y))
-            row += "{^}".format(str(matrix[x][y]))
+            row += "{} | ".format(str(matrix[x][y]))
         row = row[:-1] + "\n"
     # print(matrix)
     print(row)
