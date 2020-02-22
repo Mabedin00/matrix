@@ -18,7 +18,7 @@ ident(matrix1)
 
 print_matrix(matrix1)
 
-matrixT = [[2,0,3,0], [0,3,0,6], [0,7,4,0], [10,9,0,5]]
+matrixT = [[2,1,0,7], [0,3,0,0], [0,0,4,0], [0,0,0,5]]
 print("A new transformation Matrix Appeared!")
 print_matrix(matrixT)
 
@@ -27,13 +27,35 @@ for x in range(5):
     for y in range(4):
         matrix2[x][y] = z
         z += 1
-print("Prepared to be Transformed Matrix2!")        
+print("Prepared to be Transformed Matrix2!")
 print_matrix(matrix2)
 
 print("The transformation has been completed")
 matrix_mult(matrixT, matrix2)
 print_matrix(matrix2)
 
+add_point(matrix2, 3, 5 , 1)
+add_edge(matrix2, 40, 40, 0 ,460, 40, 0)
 
-# draw_lines( matrix, screen, color )
-# display(screen)
+print("Points Added")
+print_matrix(matrix2)
+
+matrix = new_matrix()
+matrix = matrix[4:]
+add_edge(matrix, 40, 40, 0 ,460, 40, 0)
+add_edge(matrix, 460, 40, 0, 460, 120, 0)
+add_edge(matrix, 460, 120, 0, 40, 120, 0)
+add_edge(matrix, 40, 120, 0, 40, 40, 0)
+# add_edge(matrix, 40, 40, 460, 460)
+# add_edge(matrix, 40, 40, 460, 460)
+# add_edge(matrix, 40, 40, 460, 460)
+# add_edge(matrix, 40, 40, 460, 460)
+# add_edge(matrix, 40, 40, 460, 460)
+#
+
+print_matrix(matrix)
+
+
+
+draw_lines( matrix, screen, color )
+display(screen)

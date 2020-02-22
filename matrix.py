@@ -16,7 +16,7 @@ def print_matrix( matrix ):
     for y in range(4):
         for x in range(len(matrix)):
             # print("x:{} y:{}".format(x, y))
-            row += str(matrix[x][y]) + "   "
+            row += "{^}".format(str(matrix[x][y]))
         row = row[:-1] + "\n"
     # print(matrix)
     print(row)
@@ -39,12 +39,12 @@ def matrix_mult( m1, m2 ):
 	for col in range(length):
 		for x in range(4):
 			for y in range(4):
-				row[y] = m1[x][y]
+				row[y] = m1[y][x]
 			temp_col[x] = multiply_r_and_c(row, m2[col])
 		m2[col] = temp_col[:]
-		
-			
-    
+
+
+
 
 
 
